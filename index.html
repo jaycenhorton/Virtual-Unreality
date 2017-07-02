@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+        <img id="troll" src="https://cdn.glitch.com/a3500b74-4b30-4782-b84f-6397cb7c21cc%2FRick-and-Morty.jpg?1498959792416">
+      </a-assets>
+      <a-box src="#troll" position="-1 0.5 -3" rotation="0 45 0" >
+        <a-animation  repeat="indefinite" attribute="position" from="0 0 -4" to="3 3 3" direction="alternate" dur="1000"></a-animation>
+        <a-animation attribute="rotation" repeat="indefinite" to="720 720 720"></a-animation>
+      </a-box>
+      
+        
+        
+      <a-sphere id="sphere" position="0 1.25 -5" radius="1.25" color="#EF2D5E">
+        <!-- <a-animation  repeat="indefinite" attribute="position" from="0 0 -4" to="1 3 -6" direction="alternate" dur="1000"></a-animation> -->
+        
+      </a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D">
+       <!-- <a-animation  repeat="indefinite" attribute="position" from="0 0 -4" to="0 9 2" direction="alternate" dur="1000"></a-animation> -->
+        
+      </a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4">
+        <!-- <a-animation  repeat="indefinite" attribute="position" from="0 0 -4" to="0 9 2" direction="alternate" dur="1000"></a-animation> -->
+      </a-plane>
+      <a-sky color="blue"></a-sky>
+      <!-- lightin -->
+      <a-light type="directional" intensity="2" color="yellow" position="-1 1 100"></a-light>
+      <a-camera position="0 0 0">
+        <a-cursor color="blue"></a-cursor>
+      </a-camera>
+
+    </a-scene>
+    <script type="text/javascript">
+      //$('#sphere').hide();
+    </script>
+  </body>
+</html>
